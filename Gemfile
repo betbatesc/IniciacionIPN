@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass'
 gem 'devise', '~> 3.4.1'
 gem 'toastr-rails'
+gem 'sendgrid-ruby'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
