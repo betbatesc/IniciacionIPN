@@ -3,6 +3,7 @@
     <h5>Ingresar</h5>
 
     <%= link_to "Ingresar con Google+", user_omniauth_authorize_path(:google_oauth2), class: "btn red darken-1" %>
+    <%= link_to "Ingresar con Facebook", user_omniauth_authorize_path(:facebook), class: "btn blue darken-4" %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <%= render partial: "shared/devisemes" %>

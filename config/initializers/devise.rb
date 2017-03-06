@@ -25,4 +25,7 @@ Devise.setup do |config|
   require 'omniauth-google-oauth2'
   config.omniauth :google_oauth2, '315688388206-s6r7h20da3djehdh5gh8itu5u74ee4dj.apps.googleusercontent.com', '0nPtccZ_yPFiqidxEVQLsEy4', {access_type: "offline", approval_prompt: ""}
 
+  require 'omniauth-facebook'
+  config.omniauth :facebook, '1401732259876976', 'c1fbb181398736db4140cb0000d619ad'
+
 end
