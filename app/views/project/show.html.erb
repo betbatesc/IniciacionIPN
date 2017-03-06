@@ -24,8 +24,9 @@
   			<div class="collection">
   				<% @tasks.each do |task| %>
   				  <% if task.header %>
-  				  	<div class="collection-item active">
-  				  		<i class="mdi-social-school"><%= task.title %></i>
+  				  	<div class="collection-item active valign-wrapper">
+  				  		<i class="material-icons">school</i>
+  				  		<i class=""><%= task.title %></i>
   				  	</div>
   				  <% else %>
   				    <%= link_to [task.project, task], class: "collection-item" do %>
