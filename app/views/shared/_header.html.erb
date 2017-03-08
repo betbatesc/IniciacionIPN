@@ -1,18 +1,18 @@
 <header>
-<ul id="dropdown1" class="dropdown-content">	  
+<ul id="dropdown1" class="dropdown-content mask">	  
 	  <li><%= link_to "Mi Perfil", edit_user_registration_path %></li>
-	  <li><a href="#">Mis cursos</a></li>
+	  <li><%= link_to "Mis Cursos", myprojects_path %></li>
 	  <li class="divider"></li>
 	  <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
 	</ul>
 
-	<ul id="dropdown2" class="dropdown-content">
+	<ul id="dropdown2" class="dropdown-content mask">
 	  <li><%= link_to "Mi Perfil", edit_user_registration_path %></li>
-	  <li><a href="#!">Mis cursos</a></li>
+	  <li><%= link_to "Mis Cursos", myprojects_path %></li>
 	  <li class="divider"></li>
 	  <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>	
 	</ul>
-		<nav class="blue lighten-4 z-depth-2">
+		<nav class="light-blue darken-1 z-depth-2">
 			<div class="container">
 		    	<div class="nav-wrapper">
 		      		<a href="#!" class="brand-logo">Iniciación IPN</a>
@@ -20,13 +20,13 @@
 		      			<i class="material-icons">menu</i>
 		      		</a>
 		      		<ul class="right hide-on-med-and-down">
-		        		<li><a href="#">Cursos</a></li>
+		        		<li><a href="#"><%= link_to "Cursos", root_path %></a></li>
 		        		<% if(!user_signed_in?) %>
 		        		<li><%= link_to "Registrarse", new_user_registration_path %></li>
 		        		<li><%= link_to "Ingresar", new_user_session_path %></li>		        		
 		        		<% else %>		        		
 		        		<li><a class="dropdown-button valign-wrapper" href="#!" data-activates="dropdown1">
-		        		<%= image_tag avatar_url(current_user), class: "circle responsive-img" %>&nbsp;
+		        		<%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>&nbsp;
 		        		<%= current_user.name%>
 		        		<i class="material-icons right">keyboard_arrow_down</i></a></li>
 		        		<% end %>	        		
@@ -38,7 +38,7 @@
 		        		<li><%= link_to "Ingresar", new_user_session_path %></li>		        		
 		        		<% else %>
 		        		<li><a class="dropdown-button valign-wrapper" href="#!" data-activates="dropdown2">
-		        		<%= image_tag avatar_url(current_user), class: "circle responsive-img" %>&nbsp;
+		        		<%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>&nbsp;
 		        		<%= current_user.name%>
 		        		<i class="material-icons right">keyboard_arrow_down</i></a></li>
 		        		<% end %>
